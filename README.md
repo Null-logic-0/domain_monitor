@@ -8,6 +8,13 @@
 uptime, and configuration status of your web properties. It provides a centralized dashboard to ensure your critical
 services are online and your SSL certificates are valid.
 
+
+
+https://github.com/user-attachments/assets/ceee4692-59e9-48b9-a99b-d3d7af8f8644
+
+
+
+
 ## 🛠️ Tech Stack
 
 * **Framework**: Ruby on Rails
