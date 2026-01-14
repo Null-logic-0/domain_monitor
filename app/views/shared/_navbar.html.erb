@@ -1,0 +1,33 @@
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+
+      <div class="flex-shrink-0">
+        <%= link_to root_path, class: "flex items-center gap-2 group" do %>
+          <span class="text-3xl font-bold tracking-tight text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+            Domain Monitor
+          </span>
+        <% end %>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <% if authenticated? %>
+          <%= link_to "Domains", domains_path, class: "text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200" %>
+          <% if Current.user.payment_processor&.subscribed? %>
+            <%= link_to "Billings", billing_path, data: { turbo: false },
+                        class: "text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200" %>
+          <% else %>
+            <%= link_to "Subscribe", checkout_path, data: { turbo: false },
+                        class: "text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200" %>
+          <% end %>
+          <%= button_to "Logout", session_path, method: :delete, class: "inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200" %>
+        <% else %>
+          <%= link_to "Log in", new_session_path, class: "text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200" %>
+
+          <%= link_to "Sign up", new_registration_path, class: "inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200" %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</header>
