@@ -1,24 +1,51 @@
-# README
+# Domain Monitor
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)
+![Ruby](https://img.shields.io/badge/Ruby-3.3.4-orange)
+![Rails](https://img.shields.io/badge/Rails-8.1.2-red)
 
-Things you may want to cover:
+**Domain Monitor** is a robust open-source application built with **Ruby on Rails** designed to track the health,
+uptime, and configuration status of your web properties. It provides a centralized dashboard to ensure your critical
+services are online and your SSL certificates are valid.
 
-* Ruby version
+## 🛠️ Tech Stack
 
-* System dependencies
+* **Framework**: Ruby on Rails
+* **Database**: PostgreSQL / SQLite
 
-* Configuration
+## 📋 Prerequisites
 
-* Database creation
+Before you begin, ensure you have the following installed:
 
-* Database initialization
+* Ruby 3.4.4
+* SQLite for development
 
-* How to run the test suite
+## ⚡ Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+### Local Development
 
-* Deployment instructions
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Null-logic-0/domain_monitor.git
+   cd domain_monitor
+   ```
 
-* ...
+2. **Install dependencies**
+   ```bash
+   bundle install
+   ```
+
+3. **Setup the database**
+   ```bash
+   bin/rails db:setup
+   ```
+
+4. **Start the development server**
+   ```bash
+   bin/dev
+   # OR 
+   bin/rails server
+   ```
+
+Visit `http://localhost:3000` to see the application.
+
