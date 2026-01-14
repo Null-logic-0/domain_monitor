@@ -1,7 +1,7 @@
 class Domain::SyncJob < ApplicationJob
-	queue_as :default
+  queue_as :default
 
-	def perform(domain)
-		domain.sync
-	end
+  def perform(domain)
+    domain.sync
+  end
 end
