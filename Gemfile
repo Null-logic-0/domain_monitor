@@ -72,4 +72,4 @@ gem "rdap", "~> 0.1.5"
 gem "openssl", "~> 4.0"
 
 gem "pay", "~> 11.4"
-gem "stripe", "~> 18.1"
+gem "stripe", "~> 18.2"
